@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
@@ -42,17 +42,22 @@
                 <a href="index.html" class="dropdown-toggle nav__item-link active">Inicio</a>
               </li>
               <li class="nav__item with-dropdown">
-                <a href="SistemaDeGestionSST.html" class="dropdown-toggle nav__item-link">Gestión SST</a>
-              </li>
-              <li class="nav__item with-dropdown">
-                <a href="gestion_calidad.html" class="dropdown-toggle nav__item-link">Gestión de Calidad</a>
-              </li>
-              <li class="nav__item with-dropdown">
-                <a href="gestion_ambiental.html" class="dropdown-toggle nav__item-link">Gestión Ambiental</a>
-              </li>
-              <li class="nav__item with-dropdown">
-                <a href="protocolos_covid.html" class="dropdown-toggle nav__item-link">PROTOCOLOS COVID-19<a>
-              </li>
+                <a class="dropdown-toggle nav__item-link">Servicios</a>
+                <i class="fa fa-angle-down" data-toggle="dropdown"></i>
+                <ul class="dropdown-menu">
+                  <li class="nav__item"><a href="SistemaDeGestionSST.html"
+                      class="dropdown-toggle nav__item-link">Gestión SST</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="gestion_calidad.html" class="dropdown-toggle nav__item-link">Gestión de
+                      Calidad</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="gestion_ambiental.html" class="dropdown-toggle nav__item-link">Gestión
+                      Ambiental</a></li>
+                  <!-- /.nav-item -->
+                  <li class="nav__item"><a href="protocolos_covid.html"
+                      class="dropdown-toggle nav__item-link">Protocolos Covid-19<a></li>
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
               <li class="nav__item with-dropdown">
                 <a href="leadership-team.html" class="dropdown-toggle nav__item-link">Nuestro equipo<a>
               </li>
@@ -137,7 +142,7 @@
 
           <div class="col-sm-12 col-md-12 col-lg-6">
             <div class="cta__banner">
-              <h5 class="cta__title color-white">Hacemos presencia en todas las regiones del país</h5>
+              <h5 class="cta__title color-white">Estamos presentes en todo el país</h5>
               <p class="cta__desc color-gray">Acompañamos a nuestros clientes con los mismos estándares de calidad y
                 servicio en todas sus operaciones en el lugar en el que nos necesiten.</p>
               <a href="leadership-team.html" class="btn btn__primary btn__link color-white">
@@ -407,13 +412,11 @@
                       <h4 class="contact__info-box-title">Contacto rápido </h4>
                       <ul class="contact__info-list list-unstyled">
                         <li>E-mail: <a href="mailto:Promina@7oroof.com">info@betterflyhseq.com</a></li>
-                        <li>Soporte: <a href="mailto:Promina@7oroof.com">nelsoncastro@betterflyhseq.com</a></li>
+                        <li>Comercial: <a href="mailto:Promina@7oroof.com">nelsoncastro@betterflyhseq.com</a></li>
                       </ul><!-- /.contact__info-list -->
                     </div><!-- /.contact-info-box -->
                   </div><!-- /.contact__panel-info-top -->
                   <div class="contact__panel-info-bottom bg-theme2">
-                    <strong class="contact__panel-info-title">Te regresaremos la llamada dentro de las siguientes 24
-                      horas, o puedes llamarnos cualquier día de 08:00 AM - 6:00 PM</strong>
                     <div class="contact__number d-flex align-items-center">
                       <i class="fa fa-phone"></i>
                       <a href="tel:3138218592">313 8218592</a>
@@ -450,6 +453,19 @@
                     </div><!-- /.col-lg-6 -->
                     <div class="col-sm-12 col-md-12 col-lg-12">
                       <div class="form-group">
+                        <p>Selecciona los servicios a cotizar:</p>
+                        <input type="checkbox" id="sst" name="sst" value="sst" class="switch">
+                        <label for="sst"> Gestión SST</label><br>
+                        <input type="checkbox" id="calidad" name="calidad" value="calidad" class="switch">
+                        <label for="calidad"> Gestión de Calidad</label><br>
+                        <input type="checkbox" id="ambiental" name="ambiental" value="ambiental" class="switch">
+                        <label for="ambiental"> Gestión Ambiental</label><br>
+                        <input type="checkbox" id="covid" name="covid" value="covid" class="switch">
+                        <label for="covid"> Protocolos Covid-19</label><br>
+                      </div>
+                    </div><!-- /.col-lg-12 -->
+                    <div class="col-sm-12 col-md-12 col-lg-12">
+                      <div class="form-group">
                         <textarea class="form-control" placeholder="Detalles adicionales" id="contact-messgae"
                           name="message" required></textarea>
                       </div>
@@ -461,7 +477,7 @@
                       <div class="form-group input-radio my-3">
                         <label class="label-radio">Acepto términos y condiciones para el tratamiento de datos
                           personales.
-                          <input type="checkbox" checked="">
+                          <input type="checkbox" checked="" required>
                           <span class="radio-indicator"></span>
                         </label>
                       </div>

@@ -12,13 +12,17 @@ $destino = ["admin@betterflyhseq.com","joseivanperezdiaz1@gmail.com", "marjoriep
 $asunto = "Mensaje página Betterfly HSEQ";
 $name = $_REQUEST['nombre'];
 $iphone = $_REQUEST['iphone'];
+$sst = $_REQUEST['sst'];
+$calidad = $_REQUEST['calidad'];
+$ambiental = $_REQUEST['ambiental'];
+$covid = $_REQUEST['covid'];
 $message = $_REQUEST['message'];
 
 if(empty($email)){
     header("Location:".$_SERVER['HTTP_REFERER']);
     echo "Hay campos vacíos, por favor llenar los campos requeridos con * <a href=\"\">Volver</a>.";
 }else{
-    $carta ="Este es un nuevo contacto de tu página Betterfly HSEQ Nombre: $name Teléfono: $iphone Correo: $email Mensaje: $message";
+    $carta ="Este es un nuevo contacto de tu página Betterfly HSEQ Nombre: $name Teléfono: $iphone Correo: $email Mensaje: $message Servicios: $sst $calidad $ambiental $covid";
     mail($destino[0],$asunto,$carta);
     mail($destino[1],$asunto,$carta);
     mail($destino[2],$asunto,$carta);
