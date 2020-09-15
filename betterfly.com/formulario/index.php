@@ -10,19 +10,20 @@ require 'src/SMTP.php';
 $email= $_POST['email'];
 $destino = ["admin@betterflyhseq.com","joseivanperezdiaz1@gmail.com", "marjorieperez@betterflyhseq.com"];
 $asunto = "Mensaje página Betterfly HSEQ";
-$name = $_REQUEST['nombre'];
+$name = $_REQUEST['name'];
 $iphone = $_REQUEST['iphone'];
 $sst = $_REQUEST['sst'];
 $calidad = $_REQUEST['calidad'];
 $ambiental = $_REQUEST['ambiental'];
 $covid = $_REQUEST['covid'];
+$empresarial = $_REQUEST['empresarial'];
 $message = $_REQUEST['message'];
 
 if(empty($email)){
     header("Location:".$_SERVER['HTTP_REFERER']);
     echo "Hay campos vacíos, por favor llenar los campos requeridos con * <a href=\"\">Volver</a>.";
 }else{
-    $carta ="Este es un nuevo contacto de tu página Betterfly HSEQ Nombre: $name Teléfono: $iphone Correo: $email Mensaje: $message Servicios: $sst $calidad $ambiental $covid";
+    $carta ="Este es un nuevo contacto de tu página Betterfly HSEQ Nombre: $name Teléfono: $iphone Correo: $email Mensaje: $message Servicios: $sst $calidad $ambiental $covid $empresarial";
     mail($destino[0],$asunto,$carta);
     mail($destino[1],$asunto,$carta);
     mail($destino[2],$asunto,$carta);
@@ -30,9 +31,6 @@ if(empty($email)){
     echo 'El mensaje ha sido enviado';
 }
 ?>
-
-
-
 
 <!-- 
 $action = $_REQUEST['action'];
